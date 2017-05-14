@@ -13,7 +13,7 @@ vcle = 0.1*vswe
 vswb = 0.00005
 vclb = 0.1*vswb
 phi = 30*pi/180
-nt = 36
+nt = 360
 theta = np.linspace(1,nt,nt)*pi/180
 p0 = 2*10**6
 
@@ -46,17 +46,16 @@ vgclc = vpul*vpon
 
 # gas = helium
 gama = 1.67
-r = 8.3144598/4
+r = 8314.4598/4
 cv = r/(gama-1)
 cp = gama*cv
 prandtl = 0.6829
 
 # operat
-pm = 2*10*6
+pm = 2*10**6
 tk = 300
-th = 900
+th = 77
 freq = 50
 
 tr = (th - tk)/np.log(th/tk)
 omega = 2*pi*freq
-
