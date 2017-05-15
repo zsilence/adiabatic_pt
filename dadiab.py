@@ -40,4 +40,11 @@ y[VC],y[VE],y[VB],dy[VC],dy[VE],dy[VB] = volume(theta)
 
 # pressure and pressure derivatives
 y[P] = p
-top = 
+top = -y[P]*(dy[VC]/y[TCK] + dy[VE]/y[THE])
+bottom = (y[VC]/(y[TCK]*gama) + vt + y[VE]/(y[THE]*gama))
+dy[p] = top/bottom
+
+# mass and mass flow
+y[MC] = y[P]*y[VC]/(r*y[TC])
+y[MK] = y[P]*vk/(r*tk)
+
