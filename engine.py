@@ -13,8 +13,8 @@ vcle = 0.1*vswe
 vswb = 0.00005
 vclb = 0.1*vswb
 phi = 30*pi/180
-nt = 360
-theta = np.linspace(1,nt,nt)*pi/180
+nt = 37
+theta = np.linspace(1,nt,nt)*pi/18
 p0 = 2*10**6
 
 # cooler

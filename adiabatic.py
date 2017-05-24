@@ -3,6 +3,7 @@
 __author__ = 'zz'
 
 from engine import *
+import adiab
 import numpy as np
 
 TC = 1
@@ -32,23 +33,16 @@ MRH = 24
 MHGE = 25
 MBC = 26
 
-ROWV = 22
-ROWD = 16
+ROWV = 27
+ROWD = 18
 COL = 37
 
 # adiabatic pt model
-eps = 1 # err in temperature
-max_iteration = 20
-ninc = 360
-step = ninc/36
-dtheta = 2.0*pi/ninc
+var,dvar = adiab.adiab()
 
-# initial conditions
-y(THE) = th
-y(TCK) = tk
-y(TE) = th
-y(TC) = tk
-iter = 0
-terror = 10*eps
-
-
+'''
+data = open('data.txt','w')
+for line in var:
+    print(line,file = data)
+data.close()
+'''

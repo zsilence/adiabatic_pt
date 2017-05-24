@@ -20,7 +20,12 @@ while np.max(np.abs(p1-p0))>1:
 	p1 = p1*pm/np.mean(p1)
 
 p = p1
+dp = np.linspace(1,nt,nt)
+dp[0] = p[0] - p
 vge = vpul+ve-vgclc*(p/pm)**(-1/gama)
+dvge = np.linspace(1,nt,nt)
+dvge[0] = vge[0] - vge[-1]
+dvge[1:] = vge[1:] - vge[0:nt-1]
 m = p*((vc+vb)/tk+vt+(vge)/th)/r
 
 """
